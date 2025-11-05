@@ -1,0 +1,25 @@
+{
+  "name": "enchanter-plugin",
+  "version": "1.0.0",
+  "description": "Minecraft Custom Enchantments Plugin",
+  "main": "src/main/java/lt/enchanter/EnchanterPlugin.java",
+  "scripts": {
+    "build": "mvn clean package",
+    "compile": "mvn compile",
+    "test": "mvn test",
+    "clean": "mvn clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/enchanter-plugin.git"
+  },
+  "keywords": [
+    "minecraft",
+    "spigot",
+    "bukkit",
+    "enchantments",
+    "plugin"
+  ],
+  "author": "YourName",
+  "license": "MIT"
+}

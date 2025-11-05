@@ -1,0 +1,86 @@
+# Enchanter Plugin Configuration
+# Konfigūracija custom enchantmentams
+
+# Bendri nustatymai
+general:
+  # Ar rodyti welcome žinutes žaidėjams
+  show-welcome-message: true
+  
+  # Ar rodyti enchantment efektus (dalelės, garsai)
+  show-effects: true
+  
+  # Debug režimas (detalūs logai)
+  debug-mode: false
+
+# Enchantmentų nustatymai
+enchantments:
+  unbreakable:
+    enabled: true
+    max-level: 5
+    # Šansas procentais per lygį (20% = 20 iš 100)
+    chance-per-level: 20
+    
+  explosive:
+    enabled: true
+    max-level: 3
+    # Sprogimo galios bazė
+    base-power: 1.0
+    # Ar sukurti ugnį
+    create-fire: false
+    # Ar gadinti blokus
+    damage-blocks: false
+    
+  lifesteal:
+    enabled: true
+    max-level: 5
+    # Kiek procentų žalos atgaunama kaip gyvybė
+    heal-percentage-per-level: 10
+    
+  autorepair:
+    enabled: true
+    max-level: 3
+    # Šansas sutaisyti per naudojimą
+    repair-chance-per-level: 5
+    
+  lightning:
+    enabled: true
+    max-level: 3
+    # Šansas iškviesti žaibą
+    lightning-chance-per-level: 10
+    # Papildomas žaibu žalos kiekis per lygį
+    extra-damage-per-level: 2.0
+    
+  teleport:
+    enabled: true
+    max-level: 2
+    # Šansas teleportuotis užpuolant
+    attack-teleport-chance: 15
+    # Šansas teleportuotis ginantis
+    defend-teleport-chance: 10
+    
+  freezing:
+    enabled: true
+    max-level: 4
+    # Šansas užšaldyti
+    freeze-chance-per-level: 25
+    # Užšaldymo trukmė sekundėmis bazinis + lygis
+    base-freeze-duration: 2
+    
+  poison:
+    enabled: true
+    max-level: 4
+    # Šansas apnuodyti
+    poison-chance-per-level: 30
+    # Nuodo trukmė sekundėmis bazinis + (lygis * 2)
+    base-poison-duration: 3
+
+# Pranešimai žaidėjams
+messages:
+  prefix: "§6[Enchanter]§r "
+  no-permission: "§cNeturite teisės naudoti šią komandą!"
+  enchant-success: "§aEnchantmentas sėkmingai pritaikytas!"
+  enchant-failed: "§cNepavyko pritaikyti enchantmento!"
+  invalid-enchantment: "§cNežinomas enchantmentas!"
+  invalid-item: "§cNelaikote tinkamo daikto!"
+  reload-success: "§aKonfigūracija sėkmingai perkrauta!"
+  welcome-message: "§6✨ Šiame serveryje veikia custom enchantmentai! Naudokite /listenchants"

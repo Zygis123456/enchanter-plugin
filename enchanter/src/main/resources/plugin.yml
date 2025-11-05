@@ -1,0 +1,55 @@
+name: Enchanter
+version: 1.0.0
+description: Custom enchantments plugin for Minecraft servers
+author: YourName
+main: lt.enchanter.EnchanterPlugin
+api-version: 1.20
+website: https://github.com/yourname/enchanter
+
+commands:
+  enchant:
+    description: Apply custom enchantments to items
+    usage: /enchant <enchantment> [level] [player]
+    permission: enchanter.enchant
+    aliases: [ench, customenchant]
+  
+  enchanterreload:
+    description: Reload the plugin configuration
+    usage: /enchanterreload
+    permission: enchanter.reload
+    aliases: [enchreload]
+  
+  listenchants:
+    description: List all available custom enchantments
+    usage: /listenchants
+    permission: enchanter.list
+    aliases: [enchlist, listench]
+
+permissions:
+  enchanter.*:
+    description: Gives access to all Enchanter commands
+    children:
+      enchanter.enchant: true
+      enchanter.reload: true
+      enchanter.list: true
+      enchanter.admin: true
+    default: op
+    
+  enchanter.enchant:
+    description: Allows applying enchantments to items
+    default: op
+    
+  enchanter.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+    
+  enchanter.list:
+    description: Allows listing available enchantments
+    default: true
+    
+  enchanter.admin:
+    description: Administrative permissions for enchanter
+    default: op
+
+depend: []
+softdepend: []
